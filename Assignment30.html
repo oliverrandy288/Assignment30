@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffcc00;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #recipe-title {
+            font-size: 2.5em;
+            color: #5c3a00;
+        }
+
+        .recipe {
+            border: 2px solid #5c3a00;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #4a4a4a;
+        }
+
+        .ingredients, .instructions {
+            padding-left: 20px;
+        }
+
+        footer {
+            background-color: #ffcc00;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .source-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .source-link:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Recipe Submission Page</h1>
+    </header>
+    
+    <button onclick="document.getElementById('recipe-section').style.display='block'; this.style.display='none';">View Chocolate Chip Cookie Recipe</button>
+
+    <div id="recipe-section" class="recipe" style="display:none;">
+        <h1 id="recipe-title">Chocolate Chip Cookies</h1>
+        <h2>Ingredients</h2>
+        <ul class="ingredients">
+            <li>2 1/4 cups all-purpose flour</li>
+            <li>1/2 teaspoon baking soda</li>
+            <li>1 cup unsalted butter, room temperature</li>
+            <li>1/2 cup granulated sugar</li>
+            <li>1 cup packed light-brown sugar</li>
+            <li>1 teaspoon salt</li>
+            <li>2 teaspoons pure vanilla extract</li>
+            <li>2 large eggs</li>
+            <li>2 cups semisweet and/or milk chocolate chips</li>
+        </ul>
+        
+        <h2>Instructions</h2>
+        <ol class="instructions">
+            <li>Preheat the oven to 350°F (180°C).</li>
+            <li>In a small bowl, whisk together flour and baking soda; set aside.</li>
+            <li>In a large bowl, using an electric mixer, cream the butter and sugars on medium speed until light and fluffy.</li>
+            <li>Add the salt, vanilla, and eggs; beat until well combined.</li>
+            <li>Gradually add the flour mixture; mix just until combined.</li>
+            <li>Fold in chocolate chips.</li>
+            <li>Drop dough by the tablespoon onto baking sheets, spacing them 2 inches apart.</li>
+            <li>Bake for 10-12 minutes or until golden brown.</li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>Recipe Source: <a href="https://www.example.com" class="source-link">Click here</a></p>
+    </footer>
+
+    <div id="submission-section" style="display:none;">
+        <h1>Submit Your Recipe</h1>
+        <form>
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name" name="recipe-name" required>
+            
+            <label for="ingredients">Ingredients:</label>
+            <textarea id="ingredients" name="ingredients" required></textarea>
+            
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" required></textarea>
+            
+            <button type="submit">Submit Recipe</button>
+        </form>
+    </div>
+
+    <button onclick="document.getElementById('submission-section').style.display='block'; this.style.display='none';">Submit a Recipe</button>
+</body>
+</html>
